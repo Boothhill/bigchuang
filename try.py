@@ -140,11 +140,11 @@ def search_airfoils(df, params):
         
     return results
 # ----------------- 5. 网页前端设计 -----------------
-st.title("✈️ 智能机翼检索系统 (基于本地知识库)")
+st.title("✈️ 智能机翼检索系统 (基于云端知识库)")
 
 try:
     df = load_database()
-    st.caption(f"✅ 成功连接本地数据库，已加载 {len(df)} 款机翼数据。")
+    st.caption(f"✅ 成功连接云端数据库，已加载 {len(df)} 款机翼数据。")
 except Exception as e:
     st.error(f"❌ 读取数据库失败，报错信息：{e}")
     st.stop()
